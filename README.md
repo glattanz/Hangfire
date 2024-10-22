@@ -9,6 +9,12 @@ Este projeto é uma API Web ASP.NET Core que utiliza o Hangfire para gerenciamen
 dotnet add package Microsoft.Data.SqlClient
 ```
 
+### Adicionando EF ao projeto
+```bash
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.SQLServer
+```
+
 ### Adicionando o framework Hangfire (Console do Gerenciador de Pacotes)
 ```bash
 NuGet\Install-Package Hangfire.Core -Version 1.8.11
