@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<ProductContext>(options =>
+builder.Services.AddDbContext<ProdutoContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("BlackFridayConnection")));
 
 // Add Hangfire services
@@ -38,11 +38,13 @@ app.UseAuthorization();
 
 app.UseHangfireDashboard();
 
+#pragma warning disable ASP0014 // Suggest using top level route registrations
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
     endpoints.MapHangfireDashboard();
 });
+#pragma warning restore ASP0014 // Suggest using top level route registrations
 
 
 app.Run();

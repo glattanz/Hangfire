@@ -3,14 +3,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Hangfire.Context
 {
-    public class ProductContext : DbContext
+    public class ProdutoContext : DbContext
     {
-        public ProductContext(DbContextOptions<ProductContext> options) : base(options)
+        public ProdutoContext(DbContextOptions<ProdutoContext> options) : base(options)
         {
             _random = new Random();
         }
 
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Produto> Products { get; set; }
         private readonly Random _random;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -18,7 +18,7 @@ namespace Hangfire.Context
             base.OnModelCreating(modelBuilder);
         }
 
-        public Product GetRandom()
+        public Produto GetRandom()
         {
             return Products.ElementAt(_random.Next(100));
         }

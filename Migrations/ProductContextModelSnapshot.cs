@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Hangfire.Migrations
 {
-    [DbContext(typeof(ProductContext))]
+    [DbContext(typeof(ProdutoContext))]
     partial class ProductContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

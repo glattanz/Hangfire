@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Hangfire.Migrations
 {
-    [DbContext(typeof(ProductContext))]
+    [DbContext(typeof(ProdutoContext))]
     [Migration("20241019203305_InitilizingDB")]
     partial class InitilizingDB
     {
