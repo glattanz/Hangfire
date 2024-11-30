@@ -16,7 +16,7 @@ namespace Hangfire.Controllers
         }
        
         [HttpPost("")]
-        public IActionResult DefaultAdd([FromBody] Produto product)
+        public IActionResult DefaultAdd(Produto product)
         {
             var data = _context.Add(product).Entity;
             return Ok($"Requisição padrão para adicionar um produto. Data: {data.Nome}");

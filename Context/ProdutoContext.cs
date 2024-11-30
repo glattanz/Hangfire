@@ -10,7 +10,7 @@ namespace Hangfire.Context
             _random = new Random();
         }
 
-        public DbSet<Produto> Products { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
         private readonly Random _random;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -20,7 +20,7 @@ namespace Hangfire.Context
 
         public Produto GetRandom()
         {
-            return Products.ElementAt(_random.Next(100));
+            return Produtos.ElementAt(_random.Next(100));
         }
     }
 }
